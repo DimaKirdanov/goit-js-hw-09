@@ -25,11 +25,11 @@ const options = {
   minuteIncrement: 1,
     onClose(selectedDates) {
         userDate = selectedDates[0];
-        notValidDate(userDate);
+        inValidDate(userDate);
     },
 };
 
-function notValidDate(userDate) {
+function inValidDate(userDate) {
     if (userDate <= Date.now()) {
          Notiflix.Notify.failure('Please choose a date in the future');
     } else {
